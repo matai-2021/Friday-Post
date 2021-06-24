@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Route } from 'react-router-dom'
 import { getMessages } from '../api'
 
 function Home () {
@@ -28,6 +27,16 @@ function Home () {
         <label>Message:
           <textarea id="" name="" onChange="" value="" rows="4" cols="50">
           </textarea>
+        </label>
+        <label>Gift:
+          <ul>
+            <li>
+              <input type='radio' id='' name='' onChange='' value='' />
+              <label htmlFor=''></label>
+
+              <div className='check'><div className='inside'></div></div>
+            </li>
+          </ul>
         </label>
         <button>Send your message</button>
       </form>

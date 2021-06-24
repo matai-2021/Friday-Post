@@ -24,8 +24,10 @@ function App () {
   return (
     <>
       <main>
-        <Route exact path='/' render={() => <Home />} />
-        <Route exact path='/board' render={() => <Board />} />
+        <div className='inner'>
+          <Route exact path='/' render={() => <Home />} />
+          <Route exact path='/board' render={() => <Board />} />
+        </div>
       </main>
 
     </>
