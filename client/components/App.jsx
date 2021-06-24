@@ -17,9 +17,22 @@ function App () {
 
   return (
     <>
-      <h1>Team Post :-P</h1>
-      <p>This is working yay</p>
-      <p>{messages}</p>
+      <main>
+
+        <h1>Haha</h1>
+        <p>{messages}</p>
+        <form>
+          <label>Name:
+            <input id="" name="" onChange="" value="" />
+          </label>
+          <label>Message:
+            <textarea id="" name="" onChange="" value="" rows="4" cols="50">
+            </textarea>
+          </label>
+          <button>Send your message</button>
+        </form>
+      </main>
+
     </>
   )
 }
