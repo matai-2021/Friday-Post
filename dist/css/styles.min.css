@@ -1,2 +1,2 @@
-h1{color:#006a6f;font-size:59px}
+h1{color:#006a6f;font-size:59px}.inner{width:100%;margin:0 auto}@media screen and (min-width: 768px){.inner{width:800px}}img{width:100%;border-radius:0.4rem}.cards{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap}.cards .card{border:2px solid #2b2f32;border-radius:0.8rem;padding:0.8rem;width:100%;margin:2.4rem 1.6rem}@media screen and (min-width: 768px){.cards .card{width:200px}}
 /*# sourceMappingURL=styles.min.css.map */
