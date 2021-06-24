@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { getMessages } from '../api'
+import { getMessagesAPI } from '../api'
 
 function App () {
   const [messages, setMessages] = useState([])
 
   useEffect(() => {
-    getMessages()
-      .then(messages => {
-        setMessages(messages)
+    getMessagesAPI()
+      .then(incMessages => {
+        console.log('useEffect:', incMessages)
+        setMessages(incMessages)
         return null
       })
       .catch(err => {
@@ -15,13 +16,19 @@ function App () {
       })
   }, [])
 
+  console.log('state; ', messages)
+
   return (
     <>
       <main>
 
         <h1>Haha</h1>
-        <p>{messages}</p>
-        <form>
+
+        <div>{messages.map(message => (
+          <p key={messages.id}>{message.quote}</p>
+        ))}
+        </div>
+        {/* <form>
           <label>Name:
             <input id="" name="" onChange="" value="" />
           </label>
@@ -30,7 +37,7 @@ function App () {
             </textarea>
           </label>
           <button>Send your message</button>
-        </form>
+        </form> */}
       </main>
 
     </>

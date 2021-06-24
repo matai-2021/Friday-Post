@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-export function getMessages () {
+export function getMessagesAPI () {
   return request.get('/api/v1/cards/')
     .then(res => res.body)
 }
