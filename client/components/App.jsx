@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { Route } from 'react-router-dom'
 import { getMessagesAPI } from '../api'
+import Board from './Board'
+import Home from './Home'
 
 function App () {
   const [messages, setMessages] = useState([])
@@ -21,23 +24,8 @@ function App () {
   return (
     <>
       <main>
-
-        <h1>Haha</h1>
-
-        <div>{messages.map(message => (
-          <p key={messages.id}>{message.quote}</p>
-        ))}
-        </div>
-        {/* <form>
-          <label>Name:
-            <input id="" name="" onChange="" value="" />
-          </label>
-          <label>Message:
-            <textarea id="" name="" onChange="" value="" rows="4" cols="50">
-            </textarea>
-          </label>
-          <button>Send your message</button>
-        </form> */}
+        <Route exact path='/' render={() => <Home />} />
+        <Route exact path='/board' render={() => <Board />} />
       </main>
 
     </>

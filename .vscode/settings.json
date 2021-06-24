@@ -4,7 +4,7 @@
      {
          "format": "expanded",
          "extensionName": ".css",
-         "savePath": "/public/css"
+         "savePath": "/server/public/css"
      },
      {
          "extensionName": ".min.css",
