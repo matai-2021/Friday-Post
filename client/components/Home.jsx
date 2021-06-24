@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Route } from 'react-router-dom'
 import { getMessages } from '../api'
-import Board from './Board'
-import Home from './Home'
 
-function App () {
+function Home () {
   const [messages, setMessages] = useState([])
 
   useEffect(() => {
@@ -20,13 +18,22 @@ function App () {
 
   return (
     <>
-      <main>
-        <Route exact path='/' render={() => <Home />} />
-        <Route exact path='/board' render={() => <Board />} />
-      </main>
+
+      <h1>Haha</h1>
+      <p>{messages}</p>
+      <form>
+        <label>Name:
+          <input id="" name="" onChange="" value="" />
+        </label>
+        <label>Message:
+          <textarea id="" name="" onChange="" value="" rows="4" cols="50">
+          </textarea>
+        </label>
+        <button>Send your message</button>
+      </form>
 
     </>
   )
 }
 
-export default App
+export default Home

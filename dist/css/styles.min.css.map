@@ -1,12 +1,12 @@
 {
     "version": 3,
-    "mappings": "AGAA,AAAA,EAAE,AAAC,CACD,KAAK,CDEU,OAAO,CCDvB",
+    "mappings": "AGAA,AAAA,EAAE,AAAC,CACD,KAAK,CDGU,OAAO,CCFtB,SAAS,CAAE,IAAI,CAChB",
     "sources": [
-        "../../public/src/styles.scss",
-        "../../public/src/00-global/_all.scss",
-        "../../public/src/00-global/_palette.scss",
-        "../../public/src/00-global/_typography.scss",
-        "../../public/src/01-components/_all.scss"
+        "../../server/public/src/styles.scss",
+        "../../server/public/src/00-global/_all.scss",
+        "../../server/public/src/00-global/_palette.scss",
+        "../../server/public/src/00-global/_typography.scss",
+        "../../server/public/src/01-components/_all.scss"
     ],
     "names": [],
     "file": "styles.min.css"
