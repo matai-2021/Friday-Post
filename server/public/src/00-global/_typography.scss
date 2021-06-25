@@ -1,4 +1,14 @@
 h1 {
-  color: $color-brand-50;
-  font-size: 59px;
+  color: $color-brand-40;
+  font-size: 4rem;
+}
+
+body {
+  color: $color-grey-60;
+  background-color: $color-brand-10;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  padding: 0 0.8rem;
 }

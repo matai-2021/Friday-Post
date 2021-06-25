@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from 'react'
 
-function Board () {
+function Board (prop) {
+  const { messages } = prop
+
+  // console.log(messages[0])
+
   return (
     <>
-      <h1>My Board</h1>
-      <section className='cards'>
-        <article className='card'>
-          <img src='https://solidstarts.com/wp-content/uploads/Lime_edited-480x320.jpg' />
-          <h3>Name</h3>
-          <p>Message</p>
-          <blockquote>Quote</blockquote>
-          <p>Time Stamp</p>
-        </article>
-        <article className='card'>
-          <img src='https://solidstarts.com/wp-content/uploads/Lime_edited-480x320.jpg' />
-          <h3>Name</h3>
-          <p>Message</p>
-          <blockquote>Quote</blockquote>
-          <p>Time Stamp</p>
-        </article>
-      </section>
+      <div className='inner board'>
+        <h1>My Board</h1>
+        <section className='cards'>
+          console.log(messages);
+          {messages.map(item => (
+            <>
+              <article className='card'>
+                <img src={item.photoUrl} />
+                <h3>{item.name}</h3>
+                <p>{item.message}</p>
+                <blockquote className="quote">{item.quote}</blockquote>
+                <p className="date">{item.date}</p>
+              </article>
+            </>
+          ))}
+        </section>
+      </div>
     </>
   )
 }

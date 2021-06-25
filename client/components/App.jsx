@@ -5,19 +5,19 @@ import Board from './Board'
 import Home from './Home'
 
 function App () {
-  // const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState([])
 
-  // useEffect(() => {
-  //   getMessagesAPI()
-  //     .then(incMessages => {
-  //       console.log('useEffect:', incMessages)
-  //       setMessages(incMessages)
-  //       return null
-  //     })
-  //     .catch(err => {
-  //       console.error(err)
-  //     })
-  // }, [])
+  useEffect(() => {
+    getMessagesAPI()
+      .then(incMessages => {
+        console.log('useEffect:', incMessages)
+        setMessages(incMessages)
+        return null
+      })
+      .catch(err => {
+        console.error(err)
+      })
+  }, [])
 
   // console.log('state; ', messages)
 
@@ -26,7 +26,7 @@ function App () {
       <main>
         <div className='inner'>
           <Route exact path='/' render={() => <Home />} />
-          <Route exact path='/board' render={() => <Board />} />
+          <Route exact path='/board' render={() => <Board messages={messages} />} />
         </div>
       </main>
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
-import { getMessages, addMessageAPI } from '../api'
+import { getMessagesAPI, getMessages, addMessageAPI } from '../api'
 
 function Home () {
   const [form, setForm] = useState({
@@ -34,41 +34,48 @@ function Home () {
 
   return (
     <>
-      <h1>Haha</h1>
-      <form>
-        <label htmlFor='name'>Name:
-          <input id="name"
+      <div className='inner home'>
+        <h1>Card4U</h1>
+        <h3>Please fill out form to send card</h3>
+        <form>
+          <label className="col-left" htmlFor='name'>Name:</label>
+          <input className="col-right" id="name"
             name="name"
             onChange={handleChange}
             value={form.name} />
-        </label>
-        <label htmlFor='message'>Message:
-          <textarea id="message"
+          <label className="col-left" htmlFor='message'>Message:</label>
+          <textarea className="col-right" id="message"
             name="message"
             onChange={handleChange}
             value={form.message}
             rows="4"
             cols="50">
           </textarea>
-        </label>
-        <label htmlFor='photo'>Gift:
-          <input type='radio'
-            id='photo'
-            name='photoUrl'
-            onChange={handleChange}
-            value='cat' />
-          <label htmlFor='cutePicture'>Send a kitty!</label>
-          <input type='radio'
-            id='photo'
-            name='photoUrl'
-            onChange={handleChange}
-            value='dog' />
-          <label htmlFor='cutePicture'>Send a dog!</label>
-
-          <div className='check'><div className='inside'></div></div>
-        </label>
-        <button onClick={handleSubmit}>Send your message</button>
-      </form>
+          <label htmlFor='photo'>Gift:
+            <ul>
+              <li>
+                <input type='radio'
+                  id='photo'
+                  name='photoUrl'
+                  onChange={handleChange}
+                  value='cat' />
+                <label htmlFor='cutePicture'>Send a kitty!</label>
+                <div className='check'><div className='inside'></div></div>
+              </li>
+              <li>
+                <input type='radio'
+                  id='photo'
+                  name='photoUrl'
+                  onChange={handleChange}
+                  value='dog' />
+                <label htmlFor='cutePicture'>send a dog!</label>
+                <div className='check'><div className='inside'></div></div>
+              </li>
+            </ul>
+          </label>
+          <button onClick={handleSubmit}>Send your message</button>
+        </form>
+      </div>
 
     </>
   )
