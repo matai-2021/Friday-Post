@@ -137,16 +137,37 @@ input,
 textarea {
   display: block;
   width: calc(100% - 0.8rem);
-  margin: 0.8rem 0;
+  margin: 0 0 0.8rem 0;
 }
 
-label {
-  margin-bottom: 2.4rem;
+.col-left {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .col-left {
+    display: inline-block;
+    float: left;
+    width: 20%;
+  }
+}
+
+.col-right {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .col-right {
+    display: inline-block;
+    float: left;
+    width: 70%;
+  }
 }
 
 input,
 textarea {
   padding: 0.4rem;
+  margin-bottom: 2.4rem;
   border: 2px solid #4b555c;
 }
 

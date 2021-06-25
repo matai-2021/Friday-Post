@@ -17,23 +17,15 @@ function Home () {
 
   return (
     <>
-      {/* {messages.map(item => (
-        <>
-          <h3>{item.name}</h3>
-          <p>{item.message}</p>
-        </>
-      ))} */}
       <div className='inner home'>
         <h1>Card4U</h1>
         <h3>Please fill out form to send card</h3>
         <form>
-          <label>Name:
-            <input id="" name="" onChange="" value="" />
-          </label>
-          <label>Message:
-            <textarea id="" name="" onChange="" value="" rows="4" cols="50">
-            </textarea>
-          </label>
+          <label className="col-left">Name:</label>
+          <input className="col-right" id="" name="" onChange="" value="" />
+          <label className="col-left">Message:</label>
+          <textarea className="col-right" id="" name="" onChange="" value="" rows="4" cols="50">
+          </textarea>
           <label>Gift:
             <ul>
               <li>
