@@ -7,20 +7,22 @@ function Board (prop) {
 
   return (
     <>
-      <h1>My Board</h1>
-      <section className='cards'>
-        {messages.map(item => (
-          <>
-            <article className='card'>
-              <img src={item.photoUrl} />
-              <h3>{item.name}</h3>
-              <p>{item.message}</p>
-              <blockquote>{item.quote}</blockquote>
-              <p>{item.date}</p>
-            </article>
-          </>
-        ))}
-      </section>
+      <div className='inner board'>
+        <h1>My Board</h1>
+        <section className='cards'>
+          {messages.map(item => (
+            <>
+              <article className='card'>
+                <img src={item.photoUrl} />
+                <h3>{item.name}</h3>
+                <p>{item.message}</p>
+                <blockquote className="quote">{item.quote}</blockquote>
+                <p className="date">{item.date}</p>
+              </article>
+            </>
+          ))}
+        </section>
+      </div>
     </>
   )
 }
