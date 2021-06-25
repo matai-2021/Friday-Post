@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { getMessages } from '../api'
+import { getMessagesAPI } from '../api'
 
 function Home () {
   const [messages, setMessages] = useState([])
 
   useEffect(() => {
-    getMessages()
+    getMessagesAPI()
       .then(messages => {
         setMessages(messages)
         return null
@@ -19,7 +19,7 @@ function Home () {
     <>
 
       <h1>Haha</h1>
-      <p>{messages}</p>
+      <p>[messages]</p>
       <form>
         <label>Name:
           <input id="" name="" onChange="" value="" />

@@ -10,7 +10,7 @@ function App () {
   useEffect(() => {
     getMessagesAPI()
       .then(incMessages => {
-        console.log('useEffect:', incMessages)
+        // console.log('useEffect:', incMessages)
         setMessages(incMessages)
         return null
       })
@@ -19,14 +19,14 @@ function App () {
       })
   }, [])
 
-  console.log('state; ', messages)
+  // console.log('state; ', messages)
 
   return (
     <>
       <main>
         <div className='inner'>
           <Route exact path='/' render={() => <Home />} />
-          <Route exact path='/board' render={() => <Board />} />
+          <Route exact path='/board' render={() => <Board messages={messages} />} />
         </div>
       </main>
 
