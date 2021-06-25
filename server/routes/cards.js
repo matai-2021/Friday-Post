@@ -15,4 +15,18 @@ router.get('/', (req, res) => {
     })
 })
 
+// /api/va/cards/
+router.post('/', (req, res) => {
+  // console.log(req.body)
+  db.addMessage(req.body)
+    .then(() => {
+      res.sendStatus(201)
+      return null
+    })
+    .catch(err => {
+      console.error(err)
+      res.sendStatus(500)
+    })
+})
+
 module.exports = router

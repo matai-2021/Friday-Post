@@ -5,21 +5,21 @@ import Board from './Board'
 import Home from './Home'
 
 function App () {
-  const [messages, setMessages] = useState([])
+  // const [messages, setMessages] = useState([])
 
-  useEffect(() => {
-    getMessagesAPI()
-      .then(incMessages => {
-        console.log('useEffect:', incMessages)
-        setMessages(incMessages)
-        return null
-      })
-      .catch(err => {
-        console.error(err)
-      })
-  }, [])
+  // useEffect(() => {
+  //   getMessagesAPI()
+  //     .then(incMessages => {
+  //       console.log('useEffect:', incMessages)
+  //       setMessages(incMessages)
+  //       return null
+  //     })
+  //     .catch(err => {
+  //       console.error(err)
+  //     })
+  // }, [])
 
-  console.log('state; ', messages)
+  // console.log('state; ', messages)
 
   return (
     <>
